@@ -48,15 +48,15 @@
     // Googleマップの共有URLと座標が揃ったら、空文字と null を差し替えてください。
     // mapUrl は友人向けリンク、lat/lon はGPX生成に使用します。
     const stationData = [
-      {name:'ポークプラザ松葉',mapUrl:'',lat:null,lon:null},
-      {name:'マル信緑香園',mapUrl:'',lat:null,lon:null},
-      {name:'FUJI HUB',mapUrl:'',lat:null,lon:null},
-      {name:'okudo 中村舎',mapUrl:'',lat:null,lon:null},
-      {name:'にぎわいの森',mapUrl:'',lat:null,lon:null},
-      {name:'こんま亭',mapUrl:'',lat:null,lon:null},
-      {name:'うりぼう',mapUrl:'',lat:null,lon:null},
-      {name:'弘福舎',mapUrl:'',lat:null,lon:null},
-      {name:'ういこっちゃね',mapUrl:'',lat:null,lon:null}
+      {name:'ポークプラザ松葉',mapUrl:'https://maps.app.goo.gl/A15a5Msobhp8jYcs5',lat:35.146503,lon:136.5249178},
+      {name:'マル信緑香園',mapUrl:'https://maps.app.goo.gl/ctqvSamxxjEReFh68',lat:35.1062319,lon:136.4914326},
+      {name:'FUJI HUB',mapUrl:'https://maps.app.goo.gl/pU8Ujw8sRziidwSL8',lat:35.0951191,lon:136.5204909},
+      {name:'okudo 中村舎',mapUrl:'https://maps.app.goo.gl/ErmQqFhSHTnQKNm98',lat:35.1635629,lon:136.4921372},
+      {name:'にぎわいの森',mapUrl:'https://maps.app.goo.gl/QHHpyHMgWA47sjgk8',lat:35.1577874,lon:136.5166771},
+      {name:'こんま亭',mapUrl:'https://maps.app.goo.gl/z7y8V2vVNZ5Ahf976',lat:35.1085161,lon:136.5194737},
+      {name:'うりぼう',mapUrl:'https://maps.app.goo.gl/SpAfXk2xC3UBnfq16',lat:35.0953273,lon:136.5702515},
+      {name:'弘福舎',mapUrl:'https://maps.app.goo.gl/hr95N3Tv7TtoE5o69',lat:35.2078155,lon:136.5127209},
+      {name:'ういこっちゃね',mapUrl:'https://maps.app.goo.gl/t8EXwhnq1UNZHnev9',lat:35.1930283,lon:136.4933979}
     ];
     const timeline = document.querySelector('#timeline');
     Object.entries(schedule).forEach(([time,items])=>{ const el=document.createElement('article'); el.className='time-card'; el.innerHTML=`<div class="time">${time}<small>${items.length} station${items.length>1?'s':''}</small></div><div class="stops">${items.map(([s,p])=>`<div class="stop"><strong>${s}</strong><p>${p}</p></div>`).join('')}</div>`; timeline.appendChild(el); });
